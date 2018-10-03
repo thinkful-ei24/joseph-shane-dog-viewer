@@ -1,10 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Dog from './Dog';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Dog from "./Dog";
+import * as serviceWorker from "./serviceWorker";
+import dogsList from "./breeds.json";
 
-ReactDOM.render(<Dog />, document.getElementById('root'));
+ReactDOM.render(<Dog dogs={dogsList} />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

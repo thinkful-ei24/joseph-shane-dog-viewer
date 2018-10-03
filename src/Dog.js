@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 
 import "./Dog.css";
+import DogChooser from "./dogChooser";
 
-class Dog extends Component {
+export default class Dog extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
-    return <div className="Dog" />;
+    return <DogChooser dogs={this.props.dogs} />;
   }
 }
-
-export default Dog;
