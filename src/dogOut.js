@@ -1,4 +1,5 @@
 import React from "react";
+import "./dogOut.css";
 
 export default function DogOut(props) {
   return (
