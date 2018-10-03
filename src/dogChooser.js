@@ -6,12 +6,15 @@ export default function DogChooser(props) {
     return <option value={key}>{key}</option>;
   });
 
-
-
   return (
     <form>
       <label htmlFor="dog_drop_drop" />
-      <select onChange={e=> props.currentDog(e.target.value)} id="dog_drop_down">{dogOptions}</select>
+      <select
+        onChange={e => props.currentDog(e.target.value)}
+        id="dog_drop_down"
+      >
+        {dogOptions}
+      </select>
     </form>
   );
 }
