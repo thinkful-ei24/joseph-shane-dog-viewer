@@ -7,5 +7,3 @@ export default function DogOut(props) {
     </div>
   );
 }
-
-//https://dog.ceo/api/breed/{prop}/images/random
