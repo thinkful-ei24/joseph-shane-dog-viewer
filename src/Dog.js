@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import "./Dog.css";
 
-class App extends Component {
+class Dog extends Component {
   render() {
     return <div className="Dog" />;
   }
