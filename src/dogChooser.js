@@ -3,7 +3,7 @@ import React from "react";
 export default function DogChooser(props) {
   const dogOptions = props.dogs.map(dog => {
     let key = Object.keys(dog);
-    return <option value="{key}">{key}</option>;
+    return <option value={key}>{key}</option>;
   });
 
   return (
