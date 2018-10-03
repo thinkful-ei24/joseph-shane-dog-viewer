@@ -27,11 +27,11 @@ export default class Dog extends Component {
       <div>
         <DogChooser
           dogs={this.props.dogs}
-          currentDog={currentDog => this.setState({ currentDog });
-          DogFetcher({
+          currentDog={currentDog => this.setState({ currentDog })
+          DogFetcher={
             breed: this.state.currentDog,
             setImage: currentImage => this.setState({ currentImage })
-          })
+          }
         }
   
         />
