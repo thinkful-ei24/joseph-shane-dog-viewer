@@ -1,23 +1,35 @@
-import React from "react";
+import React from 'react';
+import './carousel.css';
 
-export default function Carousel(props) {
-  function handleChange(curIndex, maxIndex) {
-    if (curIndex === maxIndex) {
-      return 0;
+export default class Carousel extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      index: -1
     }
-    console.log("test", curIndex);
-    curIndex++;
-    return curIndex;
   }
-  return (
+
+  handleChange() {
+    if(this.state.index === this.props.currentImage.length - 1) {
+      this.setState({index: 0})
+    } else {
+      this.setState({index: this.state.index + 1})
+    }
+    setTimeout(this.handleChange,3000);
+  }
+
+  componentDidMount() {
+    this.handleChange();
+  }
+
+  render() {
+      return (
     <div>
-      <button
-        onClick={e =>
-          props.onChange(handleChange(props.curIndex, props.maxIndex))
-        }
-      >
-        Next
-      </button>
+      <img src={this.props.currentImage[this.state.index]} alt="dog breed" />
     </div>
   );
+  }
+
 }

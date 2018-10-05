@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import "./Dog.css";
 import DogChooser from "./dogChooser";
-import DogOut from "./dogOut";
 import DogFetcher from "./dogFetcher";
 import Carousel from "./Carousel";
 
@@ -34,10 +33,8 @@ export default class Dog extends Component {
              setImage: currentImage => this.setState({ currentImage })
             }))}
         />
-        <DogOut currentLink={this.state.currentImage[this.state.currentIndex]} />
-        <Carousel maxIndex={this.state.currentImage.length - 1}
-           onChange={ currentIndex => this.setState({currentIndex})}
-           curIndex={this.state.currentIndex} />
+        <Carousel currentImage={this.state.currentImage}
+           />
       </div>
     );
   }
